@@ -1,0 +1,140 @@
+Practice Problems
+
+Linear Search
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    bool hasDuplicate = false;
+
+    // Check each element against all others
+    for(int i = 0; i < n - 1; i++) {
+        for(int j = i + 1; j < n; j++) {
+            if(arr[i] == arr[j]) {
+                hasDuplicate = true;
+                break;
+            }
+        }
+        if(hasDuplicate) break;
+    }
+
+    if(hasDuplicate) {
+        printf("Array contains duplicates.\n");
+    } else {
+        printf("No duplicates found in the array.\n");
+    }
+
+    return 0;
+}
+
+
+
+Binary Search
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    bool hasDuplicate = false;
+
+    // Check each element against all others
+    for(int i = 0; i < n - 1; i++) {
+        for(int j = i + 1; j < n; j++) {
+            if(arr[i] == arr[j]) {
+                hasDuplicate = true;
+                break;
+            }
+        }
+        if(hasDuplicate) break;
+    }
+
+    if(hasDuplicate) {
+        printf("Array contains duplicates.\n");
+    } else {
+        printf("No duplicates found in the array.\n");
+    }
+
+    return 0;
+}
+
+Smallest Number
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int smallest = arr[0];
+    int position = 1;
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+            position = i + 1;
+        }
+    }
+
+    printf("Smallest number is %d at position %d\n", smallest, position);
+
+    return 0;
+}
+
+
+Duplicates
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int smallest = arr[0];
+    int position = 1;
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+            position = i + 1;
+        }
+    }
+
+    printf("Smallest number is %d at position %d\n", smallest, position);
+
+    return 0;
+}
